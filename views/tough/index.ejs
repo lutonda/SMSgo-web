@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preview.colorlib.com/theme/SMSgo/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Apr 2021 15:31:43 GMT -->
+
+<head>
+  <title>SMSgo - Free Bootstrap 4 Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/css/magnific-popup.css">
+  <link rel="stylesheet" href="/css/aos.css">
+  <link rel="stylesheet" href="/css/ionicons.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="/css/jquery.timepicker.css">
+  <link rel="stylesheet" href="/css/flaticon.css">
+  <link rel="stylesheet" href="/css/icomoon.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/costum.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <nav id="colorlib-main-nav" class="border" role="navigation">
+      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+      <div class="js-fullheight colorlib-table">
+        <%- include("components/signin.ejs") %>
+        
+      </div>
+    </nav>
+    <div id="colorlib-page">
+      <header style="">
+        <div class="colorlib-navbar-brand text-center">
+          <div class="row" style="padding: 0;">
+            <div class="col-md-7"><a class="colorlib-logo" href="">SMSgo</a></div>
+            <div class="col-md-5">
+              <ul class="nav nav-tabs text-center">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#about">About</a></li>
+                <li><a data-toggle="tab" href="#api">Api</a></li>
+                <li><a data-toggle="tab" href="#how">How does it work?</a></li>
+                <% if (user ) {%>
+                  <li><a class="" href="/io/<%=user.name%>" style="position: initial;"><img
+                        src="/images/profile.png" /></a></li>
+                <%} else {%>
+                        <li><a class="js-colorlib-nav-toggle colorlib-nav-toggle" href="#" style="position: initial;"><img
+                              src="/images/profile.png" /></a></li>
+                <% }%>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="ftco-counter tab-content" id="section-counter" style="">
+        <div id="home" class="dark-bg tab-pane fade in active"> <div class="container">
+          <div class="row d-flex">
+            <h1 style="font-size: 108px;">Turn your cellphone into SMS gateway 4 free</h1>
+            <h1 style="border-top: solid 3px;"><a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"
+                style="position: initial;">Try it now</a></h1>
+          </div>
+        </div>
+        </div>
+        <div id="about" class="tab-pane fade "> <div class="container">
+          <div class="row d-flex">
+            <h1>About</h1>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-7 py-sm-3 py-md-5">
+              <div class="row py-5">
+                <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number" data-number="800">0</strong>
+                      <span>SMS sent today</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number" data-number="795">0</strong>
+                      <span>happy Customers</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number" data-number="1200">0</strong>
+                      <span>Working Hours</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number" data-number="850">0</strong>
+                      <span>Cups of coffee</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 d-flex justify-content-center align-items-center" style="background: #4a5562;">
+              <h1 style="color: #FFF;">It's time to use our SMS gateway because it will give you</h1>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="api" class="dark-bg tab-pane fade "> <div class="container">
+          <div class="row d-flex">
+            <h1>The API</h1>
+          </div>
+          <div class="row d-flex">
+            <h4>Simple example</h4>
+            https://{{hostname}}/api/v2/sendsms?apikey=q423$frg3o12iaefkn-23&message=Hey
+            there&phonId=4R&to=00244917663792
+            <br />
+            <br />
+            <h4>Advanced exemple</h4>
+          </div>
+          <div class="row">
+            <div class="col-md-7 justify-content-center counter-wrap ftco-animate" style="padding: 0;">
+              <pre class="prettyprint mycode">
+
+                    const options = {
+                      host: 'jsonplaceholder.typicode.com',
+                      path: '/users',
+                      method: 'POST',
+                      header:{
+                        apikey:"w456as89d64",
+                        station:"ew987644"
+                      },
+                      data:{
+                        message:"Hey! sending frrom SMSgo api",
+                        to:'+244917663792'
+                      }
+                    };
+                    const request = https.request(options, (res) => {})
+                   
+                  </pre>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="how" class="tab-pane fade "> <div class="container">
+          <div class="row d-flex">
+            <h1>HOW does it works?</h1>
+          </div>
+          <div class="row d-flex text-center">
+            <img src="/images/api.png" style="margin: auto; padding:35px 5px">
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number">Provide private SMS communication</strong>
+                      <span>With private SMS communication, your users can seamlessly and safely book appointments,
+                        confirm deliveries, and more.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number">Authenticate with ease.</strong>
+                      <span>With convenient two-factor authentication, users can log in without having to memorize
+                        passwords or use an extra app.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number">Send it at the right time.</strong>
+                      <span>Use notifications to send timely, well-targeted SMS messages that surprise and delight your
+                        users. (Think booking confirmations and reminders.)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18">
+                    <div class="text">
+                      <strong class="number">Get always noticed.</strong>
+                      <span>With text message marketing, you can inspire your customers with reactivation campaigns and
+                        event-based, region-specific offers.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#F96D00" />
+        </svg></div>
+    </div>
+
+    <div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRequestLabel">Request a Quote</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label for="appointment_name" class="text-black">Full Name</label>
+                <input type="text" class="form-control" id="appointment_name">
+              </div>
+              <div class="form-group">
+                <label for="appointment_email" class="text-black">Email</label>
+                <input type="text" class="form-control" id="appointment_email">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_date" class="text-black">Date</label>
+                    <input type="text" class="form-control" id="appointment_date">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_time" class="text-black">Time</label>
+                    <input type="text" class="form-control" id="appointment_time">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="appointment_message" class="text-black">Message</label>
+                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.easing.1.3.js"></script>
+  <script src="/js/jquery.waypoints.min.js"></script>
+  <script src="/js/jquery.stellar.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/aos.js"></script>
+  <script src="/js/jquery.animateNumber.min.js"></script>
+  <script src="/js/scrollax.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script>
+    $(function(){
+      $('ul.nav.nav-tabs.text-center li.active a').trigger('click')
+    })
+  </script>
+</body>
+
+</html>

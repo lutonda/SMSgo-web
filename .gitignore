@@ -1,0 +1,11 @@
+/node_modules
+/node_modules/
+/node_modules/*
+/public
+/public/
+/public/*
+/.deployment/
+/.vscode/
+/.vscode/laouch.json
+/.env*
+/.env

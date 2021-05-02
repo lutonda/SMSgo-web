@@ -1,0 +1,41 @@
+{
+  "name": "smsgo",
+  "version": "1.0.0",
+  "description": "SMSgo server application",
+  "main": "app.js",
+  "scripts": {
+    "debug": "nodemon --exec npm start",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SMSgo",
+    "SMS",
+    "SMSgateway"
+  ],
+  "author": "Sebastiao Lutonda",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.6",
+    "nodemailer": "^5.1.1",
+    "nodemailer-direct-transport": "^3.3.2",
+    "nodemailer-express-handlebars": "^3.0.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-github": "^1.1.0",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "qrcode": "^1.4.4",
+    "socket.io": "^4.0.1",
+    "uuid": "^3.3.2"
+  }
+}

@@ -1,0 +1,155 @@
+<section class="ftco-services">
+    <div class="container-fluid">
+        <div class="row no-gutters" style="height: 100vh;">
+            <div class="col-md-4 ftco-animate py-5 nav-link-wrap aside-stretch">
+                <div class="nav flex-column nav-pills p-5 text-right" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <h3 class="ml-3">Services</h3>
+                    <a class="nav-link px-4 active" id="v-pills-master-tab" data-toggle="pill" href="#v-pills-master"
+                        role="tab" aria-controls="v-pills-master" aria-selected="true"><span
+                            class="mr-3 flaticon-house-plans"></span> Interior</a>
+                    <a class="nav-link px-4" id="v-pills-buffet-tab" data-toggle="pill" href="#v-pills-buffet"
+                        role="tab" aria-controls="v-pills-buffet" aria-selected="false"><span
+                            class="mr-3 flaticon-ideas"></span> Concept</a>
+                    <a class="nav-link px-4" id="v-pills-fitness-tab" data-toggle="pill" href="#v-pills-fitness"
+                        role="tab" aria-controls="v-pills-fitness" aria-selected="false"><span
+                            class="mr-3 flaticon-modern-house"></span> Logs</a>
+                    <a class="nav-link px-4" id="v-pills-reception-tab" data-toggle="pill" href="#v-pills-reception"
+                        role="tab" aria-controls="v-pills-reception" aria-selected="false"><span
+                            class="mr-3 flaticon-skyline"></span> Settings</a>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-7">
+                    </div>
+                    <div class="col-md-5">
+                        <img src="<%=userQr %>" class="img-thumbnail" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12 text-right">
+                        <span>Your APIKEY </span>
+                        <h6>
+                            <%=user.apikey.slice(0,25)%>
+                        </h6>
+                        <h6>
+                            <%=user.email%>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 ftco-animate align-items-center">
+                <div class="tab-content pl-md-5" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active py-5" id="v-pills-master" role="tabpanel"
+                        aria-labelledby="v-pills-master-tab">
+                        <span class="icon mb-3 d-block flaticon-house-plans"></span>
+                        <h2 class="mb-4">Interior Design</h2>
+                        <p>Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis
+                            officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae
+                            deserunt qui nihil ea, tempore et quam natus quaerat doloremque.</p>
+                        <p><a href="#" class="btn btn-primary px-4 py-3">Learn More</a></p>
+                    </div>
+                    <div class="tab-pane fade py-5" id="v-pills-buffet" role="tabpanel"
+                        aria-labelledby="v-pills-buffet-tab">
+                        <span class="icon mb-3 d-block flaticon-ideas"></span>
+                        <h2 class="mb-4">Concept Design</h2>
+                        <% if (user.stations.length===0 ){%>
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <h4><i class="fa fa-exclamation-triangle fa-6x"></i><br><br>You have no Device
+                                        paired to your
+                                        account, please follow the next 2 steps to...</h4>
+                                </div>
+                                <div class="col-md-4 card">
+                                    <h4>1- Download Your App</h4>
+                                    <img src="/img/app/app_store.png" class="img-thumbnail" />
+                                    <img src="/img/app/play_store.png" class="img-thumbnail" />
+                                </div>
+                                <div class="col-md-4 card">
+                                    <div class="row">
+                                        <div>
+                                            <h4>2- Enter your SMSgo credentials or just scan the qr code</h4>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <img src="" class="img-thumbnail-x" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%} else {%>
+                                <div class="col col-md-12 col-sm-12">
+                                    <form method="POST" id="sendmessageform" action="/io/{{user.username}}/apijob">
+
+                                        <div class="col-md-12">
+                                            <% user.stations.forEach((station)=>{%>
+                                                <div class="col-md-2 col-sm-3 col-xs-3 radio text-center">
+                                                    <div id="<%=station.deviceId %>" class="card" style="padding:15px">
+                                                        <label for="_key_<%=station.key%>" class="select"><img
+                                                                src="/img/smartphone.png" style="width: 98%">
+                                                            <input type="radio" name="station"
+                                                                id="_key_<%=station.key%>"
+                                                                value="<%= station.deviceId %>" class="hidden"
+                                                                required><span style="font-size: 18px">
+                                                                <small style="font-size:9px">
+                                                                    <%=station.deviceId %> <br>
+                                                                        -<%= station.key %>-
+                                                                </small>
+                                                            </span> <i class="fab fa-android fa-2x"></i></label>
+                                                    </div>
+                                                </div>
+                                                <% }); %>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="to"> Recipient phone number:</label>
+                                                <input class="form-control" id="to" type="number" required
+                                                    placeholder="Receiver phone number" name="to" autocomplete='no' />
+                                            </div>
+                                            <div class="form-group"><label for="name">Your message:</label>
+                                                <textarea class="form-control" id="message" type="password" required
+                                                    name="message"></textarea>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 text-left"><button class="btn btn-lg btn-primary"
+                                                        type="submit">Send message</button></div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div class="tab-pane fade py-5" id="v-pills-fitness" role="tabpanel"
+                        aria-labelledby="v-pills-fitness-tab">
+                        <span class="icon mb-3 d-block flaticon-modern-house"></span>
+                        <h2 class="mb-4">Residential Design</h2>
+                        <p>Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis
+                            officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae
+                            deserunt qui nihil ea, tempore et quam natus quaerat doloremque.</p>
+                        <p><a href="#" class="btn btn-primary px-4 py-3">Learn More</a></p>
+                    </div>
+                    <div class="tab-pane fade py-5" id="v-pills-reception" role="tabpanel"
+                        aria-labelledby="v-pills-reception-tab">
+                        <span class="icon mb-3 d-block flaticon-skyline"></span>
+                        <h2 class="mb-4">Hospitality Design</h2>
+                        <p>Inventore fugit error iure nisi reiciendis fugiat illo pariatur quam sequi quod iusto facilis
+                            officiis nobis sit quis molestias asperiores rem, blanditiis! Commodi exercitationem vitae
+                            deserunt qui nihil ea, tempore et quam natus quaerat doloremque.</p>
+                        <p><a href="#" class="btn btn-primary px-4 py-3">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-7">
+        <div class="row" style="margin-top: 15px">
+
+
+        </div>
+    </div>
