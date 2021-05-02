@@ -1,0 +1,70 @@
+header ul.nav li {
+    padding: 5px 15px;
+}
+header ul.nav li.active {
+    border-bottom: solid 3px;
+    color: #4a5562 !important;
+}
+
+.mycode {
+    display: block;
+    padding: 3px 3px 2px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    background-color: #333;
+    font-family: arial;
+    color: #f7f7f7;
+
+    border: solid 4px #4a5562;
+    border-top-width: 39px;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0,0,0,.6);
+}
+
+.ftco-counter .text span {
+    font-size: 14px;
+    color: #42506b;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
+.colorlib-navbar-brand > .row {
+    padding: 0;
+}
+
+
+form *{
+    text-align: left;
+}
+
+#colorlib-main-nav .colorlib-table {
+    display: table;
+    width: 99%;
+    height: 100%;
+}
+
+
+.dark-bg{
+    color: #FFF;
+    background-color: #4a5562;
+}
+.dark-bg *{
+    color: #FFF;
+}
+
+section#section-counter {
+    padding-top: 8%;
+    height: 98vh;
+}
+section#section-counter > div.tab-pane {
+    height: 98%;
+    border-top: solid 1px #4a5562;
+    padding: 30px;
+}
+.card.active{
+    border: solid 1px #38c923;
+}
