@@ -21,6 +21,17 @@
   <link rel="stylesheet" href="/css/icomoon.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/costum.css">
+
+  
+    <style>
+        #editorx { 
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+    </style>
 </head>
 
 <body>
@@ -144,6 +155,14 @@
                     const request = https.request(options, (res) => {})
                    
                   </pre>
+            </div>
+
+            
+            <div id="editor">
+                function foo(items) {
+                    var x = "All this is syntax highlighted";
+                    return x;
+                }
             </div>
           </div>
         </div>
@@ -277,6 +296,13 @@
       $('ul.nav.nav-tabs.text-center li.active a').trigger('click')
     })
   </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/javascript");
+    </script>
 </body>
 
 </html>
