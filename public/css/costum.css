@@ -72,3 +72,13 @@ section#section-counter > div.tab-pane {
 .card.active{
     border: solid 1px #38c923;
 }
+
+.form-control, button.btn {
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #000 !important;
+}
+
+.form-control:hover, button.btn:hover {
+    border-radius: 5px;
+    box-shadow: 0 5px 50px #000 !important;
+}

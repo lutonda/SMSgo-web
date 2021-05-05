@@ -35,29 +35,31 @@
       </div>
     </nav>
     <div id="colorlib-page">
-      <header style="">
+      <header>
         <div class="colorlib-navbar-brand text-center">
           <div class="row" style="padding: 0;">
             <div class="col-md-7"><a class="colorlib-logo" href="">SMSgo</a></div>
             <div class="col-md-5">
               <ul class="nav nav-tabs text-center">
-                <li><a data-toggle="tab" href="#home" class="active">Home</a></li>
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
                 <li><a data-toggle="tab" href="#about">About</a></li>
                 <li><a data-toggle="tab" href="#api">Api</a></li>
                 <li><a data-toggle="tab" href="#how">How does it work?</a></li>
-                <% if (user ) {%>
-                  <li><a class="" href="/io/<%=user.name%>" style="position: initial;"><img
-                        src="/images/profile.png" /></a></li>
+                <% if ( user ) {%>
+                  <li><a class="" href="/io/<%=user.name%>" style="position: initial;">
+                    <img src="/images/profile.png" /></a>
+                </li>
                 <%} else {%>
-                        <li><a class="js-colorlib-nav-toggle colorlib-nav-toggle" href="#" style="position: initial;"><img
-                              src="/images/profile.png" /></a></li>
+                <li><a class="js-colorlib-nav-toggle colorlib-nav-toggle" href="#" style="position: initial;">
+                    <img src="/images/profile.png" /></a>
+                </li>
                 <% }%>
               </ul>
             </div>
           </div>
         </div>
       </header>
-      <section class="ftco-counter tab-content" id="section-counter" style="">
+      <section class="ftco-counter tab-content" id="section-counter">
         <div id="home" class="dark-bg tab-pane fade in active"> <div class="container">
           <div class="row d-flex">
             <h1 style="font-size: 108px;">Turn your cellphone into SMS gateway 4 free</h1>
