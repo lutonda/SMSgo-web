@@ -1,7 +1,7 @@
-header ul.nav li {
+header ul.nav a {
     padding: 5px 15px;
 }
-header ul.nav li.active {
+header ul.nav a.active {
     border-bottom: solid 3px;
     color: #4a5562 !important;
 }
