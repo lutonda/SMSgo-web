@@ -120,9 +120,10 @@
             <h1>The API</h1>
           </div>
           <div class="row d-flex">
-            <h4>Simple example</h4>
-            https://{{hostname}}/api/v2/sendsms?apikey=q423$frg3o12iaefkn-23&message=Hey
-            there&phonId=4R&to=00244917663792
+            <h4>Simple example</h4><br>
+            <div>
+                https://<span id="server"></span>/api/v2/sendsms?apikey=q423$frg3o12iaefkn-23&message=Heythere&phonId=4R&to=00244917663792
+            </div>
             <br />
             <br />
             <h4>Advanced exemple</h4>
@@ -277,6 +278,7 @@
   <script>
     $(function(){
       $('ul.nav.nav-tabs.text-center li.active a').trigger('click')
+      $('#server').html(location.host )
     })
   </script>
   

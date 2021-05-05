@@ -90,3 +90,7 @@ button.btn {
     border-radius: 5px;
     box-shadow: 0 5px 50px #000 !important;
 }
+
+.hidden{
+    display: none;
+}

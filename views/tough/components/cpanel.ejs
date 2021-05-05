@@ -81,20 +81,20 @@
                                 <div class="col col-md-12 col-sm-12">
                                     <form method="POST" id="sendmessageform" action="/io/{{user.username}}/apijob">
 
-                                        <div class="col-md-12">
+                                        <div class="col-md-12" style="padding: 0;">
                                             <% user.stations.forEach((station)=>{%>
                                                 <div class="col-md-2 col-sm-3 col-xs-3 radio text-center">
-                                                    <div id="<%=station.deviceId %>" class="card" style="padding:15px">
-                                                        <label for="_key_<%=station.key%>" class="select"><img
+                                                    <div id="<%=station.deviceId %>" class="card">
+                                                        <label for="_key_<%=station.key%>" class="select text-center "><img
                                                                 src="/img/smartphone.png" style="width: 98%">
                                                             <input type="radio" name="station"
                                                                 id="_key_<%=station.key%>"
                                                                 value="<%= station.deviceId %>" class="hidden"
                                                                 required><span style="font-size: 18px">
                                                                 <small style="font-size:9px">
-                                                                    <%=station.deviceId %> <br>
-                                                                        -<%= station.key %>-
-                                                                </small>
+                                                                    <%=station.deviceId %></small>
+                                                                        <h4 class=" text-center"><%= station.key %></h4>
+                                                                
                                                             </span> <i class="fab fa-android fa-2x"></i></label>
                                                     </div>
                                                 </div>
