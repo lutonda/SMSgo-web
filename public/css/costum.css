@@ -78,6 +78,14 @@ section#section-counter > div.tab-pane {
     box-shadow: 0 5px 5px #000 !important;
 }
 
+button.btn:hover {
+    color: #FFF;
+}
+
+button.btn {
+    padding: 15px 50px;
+}
+
 .form-control:hover, button.btn:hover {
     border-radius: 5px;
     box-shadow: 0 5px 50px #000 !important;
